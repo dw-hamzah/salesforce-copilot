@@ -21,8 +21,8 @@ def salesforce_ai(message, history):
 
 
 with gr.Blocks(title="SalesForce Copilot") as demo:
-    gr.Markdown("## 🤖 Supply Chain AI Copilot")
-    gr.Markdown("Ask me things like 'Check stock for product 1' or 'Generate reorder plan'.")
+    gr.Markdown("## 🤖 SalesForce Copilot")
+    gr.Markdown("Ask me things like 'Customer details, Product details, Creating Orders or Check current stock'.")
     gr.ChatInterface(
         salesforce_ai,
         type="messages",
