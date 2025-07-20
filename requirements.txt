@@ -1,0 +1,34 @@
+# run: pip install -r requirements.txt
+
+# Core LLM & agent orchestration
+langchain
+langchain-community
+langchain-groq
+
+# Vector database (Chroma)
+chromadb
+
+# Embeddings & NLP
+sentence-transformers
+
+# Data handling
+pandas
+
+# PDF reading (for document ingestion)
+pypdf
+
+# Web UI
+gradio
+
+# Environment variables
+python-dotenv
+
+# Scheduler (for reminders, optional)
+APScheduler
+
+# LLM model
+groq
+
+# Pg Database
+psycopg2
+sqlalchemy
