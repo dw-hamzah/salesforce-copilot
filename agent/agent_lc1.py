@@ -14,6 +14,7 @@ from tools.get_last_transaction import get_last_transaction
 from tools.get_customer_detail import get_customer_detail
 from tools.create_customer import create_customer
 from tools.take_order import take_order
+from rag.query import ask_product_info
 
 # Get your Groq API key from environment
 load_dotenv()
@@ -80,7 +81,15 @@ tools = [
             "Use this to take an order from a customer and calculate subtotals and total value. "
             "Input format: 'customer name, order: product1 - qty, product2 - qty'. "
             "Example: 'Toko Tani Berkah, order: Benih Jagung Nogorojo - 10, Emasol 30E - 8'")
+    ),
+    Tool(
+        name="ProductInfoTool",
+        func=ask_product_info,
+        description=(
+            "Ask for product information or safety instructions. "
+            "Input should be the question. Example: 'What is the dosage for Amora 150SL?'"
     )
+)
 ]
 
 # Initialize agent
@@ -105,7 +114,7 @@ def run_agent(user_input):
 if __name__ == "__main__":
     # Simple CLI for quick test
     while True:
-        user_input = input("\nWhat do you want to ask the Supply Chain Agent?\n> ")
+        user_input = input("\nWhat do you want to ask the Salesforce Copilot?\n> ")
         if user_input.lower() in ('exit', 'quit'):
             break
 

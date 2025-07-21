@@ -32,3 +32,15 @@ groq
 # Pg Database
 psycopg2
 sqlalchemy
+
+# Similiarity Engine
+faiss-cpu
+
+# Transforming data to LLM format
+unstructured
+
+# pdf file tools
+pypdf
+
+# huggingface
+hf_xet

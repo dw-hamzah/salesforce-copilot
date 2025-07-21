@@ -67,7 +67,7 @@ def run_agent(user_input):
 if __name__ == "__main__":
     # Simple CLI for quick test
     while True:
-        user_input = input("\nWhat do you want to ask the Supply Chain Agent?\n> ")
+        user_input = input("\nWhat do you want to ask the Salesforce Copilot?\n> ")
         if user_input.lower() in ('exit', 'quit'):
             break
 
