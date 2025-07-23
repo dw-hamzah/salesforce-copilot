@@ -15,7 +15,7 @@ def create_customer(input_str: str) -> str:
     """
     parts = [part.strip() for part in input_str.split(",")]
     if len(parts) != 4:
-        return "❌ Invalid input. Please provide: customer_name,customer_address,customer_district,customer_city"
+        return "❌ Invalid input. gunakan: customer_name,customer_address,customer_district,customer_city"
 
     customer_name, customer_address, customer_district, customer_city = parts
 

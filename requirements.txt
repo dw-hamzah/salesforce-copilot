@@ -40,8 +40,5 @@ faiss-cpu
 # Transforming data to LLM format
 unstructured
 
-# pdf file tools
-pypdf
-
 # huggingface
 hf_xet

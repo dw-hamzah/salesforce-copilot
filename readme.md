@@ -20,7 +20,6 @@ Current tech stack:
 
 **Planned / in progress:**
 - Vector store (e.g., FAISS / Chroma) to store embeddings for faster semantic retrieval
-- REST API built with FastAPI to expose endpoints for integration with frontend or mobile app
 
 ---
 

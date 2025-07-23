@@ -31,6 +31,8 @@ with gr.Blocks(title="SalesForce Copilot") as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(
+        share=True
+        )
 
 
