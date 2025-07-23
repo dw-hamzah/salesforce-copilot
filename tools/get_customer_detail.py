@@ -20,17 +20,17 @@ def get_customer_detail(name: str, district: str, city: str) -> str:
         ).first()
 
         if customer:
-            return (f"✅ Customer found:\n"
+            return (f"✅ Customer terdartar:\n"
                     f"- ID: {customer.customer_id}\n"
-                    f"- Name: {customer.customer_name}\n"
-                    f"- Address: {customer.customer_address}\n"
-                    f"- District: {customer.customer_district}\n"
-                    f"- City: {customer.customer_city}")
+                    f"- Nama: {customer.customer_name}\n"
+                    f"- Alamat: {customer.customer_address}\n"
+                    f"- Kecamatan: {customer.customer_district}\n"
+                    f"- Kota: {customer.customer_city}")
         else:
-            return (f"❌ Customer not found matching:\n"
-                    f"• Name like '{name}'\n"
-                    f"• District like '{district}'\n"
-                    f"• City like '{city}'")
+            return (f"❌ Customer tidak ditemukan:\n"
+                    f"• Nama mirip seperti '{name}'\n"
+                    f"• Kecamatan mirip seperti '{district}'\n"
+                    f"• Kota mirip seperti '{city}'")
 
     except Exception as e:
         return f"❌ Error: {str(e)}"

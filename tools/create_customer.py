@@ -31,12 +31,12 @@ def create_customer(input_str: str) -> str:
         session.add(new_customer)
         session.commit()
 
-        return (f"✅ New customer registered successfully:\n"
+        return (f"✅ Customer berhasil didaftarkan:\n"
                 f"- ID: {new_customer.customer_id}\n"
-                f"- Name: {new_customer.customer_name}\n"
-                f"- Address: {new_customer.customer_address}\n"
-                f"- District: {new_customer.customer_district}\n"
-                f"- City: {new_customer.customer_city}")
+                f"- Nama: {new_customer.customer_name}\n"
+                f"- Alamat: {new_customer.customer_address}\n"
+                f"- Kecamatan: {new_customer.customer_district}\n"
+                f"- Kota: {new_customer.customer_city}")
 
     except Exception as e:
         session.rollback()

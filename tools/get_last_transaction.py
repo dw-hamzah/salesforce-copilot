@@ -44,15 +44,15 @@ def get_last_transaction(search_term: str) -> str:
         ).all()
 
         if not transactions:
-            return f"ℹ No transactions found for last order number: {last_order_number}"
+            return f"ℹ Tidak ada transaksi ditemukan: {last_order_number}"
 
         # Step 4: Build response
         order_date = last_tx.created_at.strftime("%Y-%m-%d %H:%M")
         header = (
-            f"🧾 Last Sales Order for {customer.customer_id} - {customer.customer_name}:\n"
+            f"🧾 Transaksi terakhir untuk {customer.customer_id} - {customer.customer_name}:\n"
             f"- Sales Order: {last_order_number}\n"
-            f"- Date: {order_date}\n"
-            f"- Products:"
+            f"- Tanggal: {order_date}\n"
+            f"- Produk:"
         )
 
         product_lines = []

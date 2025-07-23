@@ -2,7 +2,6 @@ from sqlalchemy import func
 import sys
 import os
 
-# define project root
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from db.db import SessionLocal
@@ -24,7 +23,7 @@ def check_stock(search_term: str) -> str:
             ).first()
 
         if not product:
-            return f"❌ Product not found: '{search_term}'"
+            return f"❌ Produk tidak ditemukan: '{search_term}'"
 
         # product_id & product_name always combined
         label = f"{product.product_id} - {product.product_name}"
@@ -46,7 +45,8 @@ def check_stock(search_term: str) -> str:
 
         current_stock = (purchased_sum or 0) - (sold_sum or 0)
 
-        return f"{label}: Current stock is {current_stock} {product.uom}"
+        return f"{label}: Stok produk saat ini {current_stock} {product.uom}"
+
 
     except Exception as e:
         return f"❌ Error: {str(e)}"

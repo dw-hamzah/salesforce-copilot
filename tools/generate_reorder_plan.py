@@ -49,10 +49,10 @@ def generate_reorder_plan() -> pd.DataFrame:
                 recommended_reorder_qty = 0
 
             plan.append({
-                "Product": f"{product_id} - {product_name}",
-                "Current Stock": f"{current_stock} {uom}",
+                "Produk": f"{product_id} - {product_name}",
+                "Stok Saat ini": f"{current_stock} {uom}",
                 "Reorder Point": reorder_point,
-                "Recommended Reorder Qty": f"{recommended_reorder_qty} {uom}"
+                "Rekomendasi Reorder Qty": f"{recommended_reorder_qty} {uom}"
             })
 
         df = pd.DataFrame(plan)

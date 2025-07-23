@@ -102,8 +102,8 @@ def take_order(input_str: str) -> str:
         # Save all to DB
         session.commit()
 
-        lines.append(f"\n🧾 Sales Order Number: {sales_order_number}")
-        lines.append(f"💰 **Total Order Value:** Rp {total:,.0f}")
+        lines.append(f"\n🧾 Nomor Sales Order: {sales_order_number}")
+        lines.append(f"💰 **Nilai Total Order:** Rp {total:,.0f}")
 
         return "\n".join(lines)
 

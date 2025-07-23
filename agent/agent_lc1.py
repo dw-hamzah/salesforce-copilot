@@ -27,7 +27,7 @@ try:
         # model_name="compound-beta" --> parsing error
         # model_name="llama-3.1-8b-instant", --> response stump
         # model_name="mixtral-8x7b",  --> model not found
-        # model_name="llama2-70b-4096", -> model not foundcheck
+        # model_name="llama2-70b-4096", -> model not found
         model_name="qwen/qwen3-32b", # --> running well
         groq_api_key=os.getenv("GROQ_API_KEY")
     )
@@ -103,8 +103,14 @@ agent = initialize_agent(
 def run_agent(user_input):
     try:
         response = agent.invoke(
-            f"Please respond clearly. If you need to check stock, use CheckStockTool. "
+            f"Please respond clearly." 
+            f"If you need to check stock, use CheckStockTool. "
+            f"If you need to check customer is alredy registered, use CheckCustomerByNameAndLocationTool"
+            f"If you need to register new customer, use RegisterNewCustomerTool"
+            f"If you need to check the last transaction, use GetLastTransactionTool"
+            f"If you need to taking order, use TakeOrderTool"
             f"If you need to generate a reorder plan, use GenerateReorderPlanTool. "
+            f"If you need to ask relate to product information like benefits, dosage, safety data, use ProductInfoTool"
             f"Question: {user_input}"
         )
         return response.get('output', str(response))
