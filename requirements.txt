@@ -4,6 +4,7 @@
 langchain
 langchain-community
 langchain-groq
+langchain-huggingface
 
 # Vector database (Chroma)
 chromadb
