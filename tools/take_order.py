@@ -1,5 +1,3 @@
-# tools/take_order.py
-
 import sys
 import os
 from datetime import datetime

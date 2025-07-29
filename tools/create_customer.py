@@ -1,5 +1,3 @@
-# tools/register_new_customer.py
-
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -15,7 +13,7 @@ def create_customer(input_str: str) -> str:
     """
     parts = [part.strip() for part in input_str.split(",")]
     if len(parts) != 4:
-        return "❌ Invalid input. gunakan: customer_name,customer_address,customer_district,customer_city"
+        return "❌ Invalid input. Gunakan: customer_name,customer_address,customer_district,customer_city"
 
     customer_name, customer_address, customer_district, customer_city = parts
 

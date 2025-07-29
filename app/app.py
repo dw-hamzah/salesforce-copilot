@@ -32,7 +32,7 @@ with gr.Blocks(title="SalesForce Copilot") as demo:
 
 if __name__ == "__main__":
     demo.launch(
-        share=True
+        # share=True
         )
 
 

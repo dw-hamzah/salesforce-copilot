@@ -29,3 +29,37 @@ Current tech stack:
 ```bash
 git clone https://github.com/yourusername/salesforce-copilot.git
 cd salesforce-copilot
+```
+
+### 2️⃣ Create and activate virtual environment
+```bash
+python -m venv venv
+# On Windows
+venv\Scripts\activate
+# On Linux / macOS
+source venv/bin/activate
+```
+
+### 3️⃣ Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+## 🛠️ Environment Setup
+### 4️⃣ Setup environment variables
+```bash
+GROQ_API_KEY=your_groq_api_key_here
+DATABASE_URL=postgresql://username:password@localhost:5432/salesforce_copilot
+```
+
+## 🏗️ Database Setup
+### 5️⃣ Create the database
+Create your DB with postgres or mysql with name: salesforce_copilot
+```bash
+python scripts/init_db.py
+```
+
+## ▶️ Running the Project
+```bash
+python app/app.py
+```
